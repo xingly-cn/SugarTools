@@ -1,7 +1,7 @@
 package com.sugar.message.service;
 
-import com.sugar.message.entity.Wechat;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sugar.message.entity.Wechat;
 
 /**
  * <p>
@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface WechatService extends IService<Wechat> {
 
+    int sendMsg(Wechat wechat);
 }

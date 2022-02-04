@@ -21,6 +21,13 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  mail:
+    host: smtp.exmail.qq.com
+    username: shukayun@xingly.cn
+    password: QPaAs8c4WfqMtzTN
+    default-encoding: UTF-8
+    port: 465
+
 
 mybatis-plus:
   mapper-locations: classpath:/xml/**.xml
