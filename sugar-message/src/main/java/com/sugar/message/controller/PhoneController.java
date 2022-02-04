@@ -1,17 +1,17 @@
 package com.sugar.message.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sugar.common.result.R;
+import com.sugar.message.entity.Phone;
 import com.sugar.message.service.PhoneService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Random;
+import java.util.List;
 
 /**
  * <p>
@@ -30,11 +30,27 @@ public class PhoneController {
     @Autowired
     private PhoneService phoneService;
 
-    @GetMapping("/send")
-    public R sendMessage(String phone) {
-        String code = String.format("%04d",new Random().nextInt(9999));
-        return R.ok().data("yzm",code);
+    //TODO 发送短信,对手机号进行正则校验,对短信内容进行关键词过滤
+    @PostMapping("/send")
+    @ApiOperation("发送短信")
+    public R sendMessage(@RequestBody Phone phone) {
+        int flag = phoneService.sendMsg(phone);
+        return flag == 0 ? R.error() : R.ok().message("发送成功");
     }
+
+    @GetMapping("/list")
+    @ApiOperation("分页查询短信")
+    public R listMessage(String phone, long cur, long size) {
+        Page<Phone> page = new Page<>(cur,size);
+        QueryWrapper<Phone> wrapper = new QueryWrapper<>();
+        wrapper.eq("phone",phone);
+        phoneService.page(page,wrapper);
+        long total = page.getTotal();
+        return R.ok().data("phone",phone).data("total",total).data("data",page.getRecords());
+    }
+
+
+
 
 }
 

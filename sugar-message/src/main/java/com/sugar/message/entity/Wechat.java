@@ -1,9 +1,8 @@
 package com.sugar.message.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -41,6 +40,7 @@ public class Wechat implements Serializable {
     @ApiModelProperty(value = "通知内容")
     private String content;
 
+    @TableField(fill = FieldFill.INSERT)
     @ApiModelProperty(value = "发送时间")
     private Date gmtCreate;
 
