@@ -27,6 +27,7 @@ spring:
     password: QPaAs8c4WfqMtzTN
     default-encoding: UTF-8
     port: 465
+    protocol: smtps
 
 
 mybatis-plus:
