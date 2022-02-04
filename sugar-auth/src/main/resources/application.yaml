@@ -1,0 +1,15 @@
+server:
+  port: 8291
+
+spring:
+  application:
+    name: sugar-auth
+  redis:
+    host: 175.27.243.243
+    port: 6379
+    password: 213879
+    timeout: 1800000
+    database: 0
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
