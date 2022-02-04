@@ -27,7 +27,7 @@ public class MailServiceImpl extends ServiceImpl<MailMapper, Mail> implements Ma
     public int sendMsg(Mail mail) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("shukayun@xingly.cn");
-        //TODO 多个抄送人处理
+        //TODO 多个抄送人处理，people的传参用逗号分割，组成字符串列表
         if (mail.getPeople().equals("")) {
             message.setTo(mail.getMail());
         }else {
