@@ -63,7 +63,7 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("message_phone");//根据数据库哪张表生成，有多张表就加逗号继续填写
+        strategy.setInclude("message_mail","message_wechat");//根据数据库哪张表生成，有多张表就加逗号继续填写
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
