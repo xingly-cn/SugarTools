@@ -17,6 +17,7 @@
 
     <modules>
         <module>sugar-common</module>
+        <module>sugar-auth</module>
     </modules>
 
     <properties>
