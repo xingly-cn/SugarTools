@@ -18,6 +18,7 @@
     <modules>
         <module>sugar-common</module>
         <module>sugar-auth</module>
+        <module>sugar-message</module>
     </modules>
 
     <properties>
