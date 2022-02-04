@@ -6,20 +6,20 @@
 # 🛠️包含组件
 一个 Java 小巧工具箱，对各类 JDK 进行封装，组成各种小工具，一键使用，同时提供以下组件：
 
-| 模块            | 介绍                                    |
-|---------------|---------------------------------------|
-| Sugar-Common  | 全局公共模块（Swagger + Redis + MybatisPlus） |
-| Sugar-Auth    | SSO单点登录模块 （基于 Token 实现）               |
-| Sugar-Message | 统一通知模块（短信 + 微信公众号 + 邮件 + 机器人）         |
-| Sugar-WeLogin | 微信扫码登陆模块                              |
-| Sugar-WePay   | 微信支付模块                                |
-| Sugar-Video   | 视频点播模块（支持分段加密 + 身份校验）                 |
-| Sugar-Nacos   | 注册中心模块                                |
-| Sugar-Gateway | 服务网关模块                                |
-| Sugar-Admin   | 统一后台管理模块（数据增删 + 用户权限）                 |
+| 模块            | 介绍                                    | 进度   |
+|---------------|---------------------------------------|------|
+| Sugar-Common  | 全局公共模块（Swagger + Redis + MybatisPlus） | 100% |
+| Sugar-Auth    | SSO单点登录模块 （基于 Token 实现）               | 0%   |
+| Sugar-Message | 统一通知模块（短信 + 微信公众号 + 邮件 + 机器人）         | 33%  |
+| Sugar-WeLogin | 微信扫码登陆模块                              |  0%    |
+| Sugar-WePay   | 微信支付模块                                |    0%  |
+| Sugar-Video   | 视频点播模块（支持分段加密 + 身份校验）                 |    0%  |
+| Sugar-Nacos   | 注册中心模块                                |    0%  |
+| Sugar-Gateway | 服务网关模块                                |   0%   |
+| Sugar-Admin   | 统一后台管理模块（数据增删 + 用户权限）                 |   0%   | 
 
 # 🎁正在开发中
-- `Sugar-Auth` 50%
+- `Sugar-Message` 50%
 
 
 # 🧬贡献代码的步骤
