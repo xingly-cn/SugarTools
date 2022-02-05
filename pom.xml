@@ -19,6 +19,7 @@
         <module>sugar-common</module>
         <module>sugar-auth</module>
         <module>sugar-message</module>
+        <module>sugar-nacos</module>
     </modules>
 
     <properties>
