@@ -25,7 +25,7 @@ public class CodeGenerator {
 
         // 2、全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("C:\\Users\\98759\\Desktop\\SugarTools\\sugar-message" + "/src/main/java"); //输出目录
+        gc.setOutputDir("C:\\Users\\98759\\Desktop\\SugarTools\\sugar-auth" + "/src/main/java"); //输出目录
 
         gc.setAuthor("方糖"); //作者名
         gc.setOpen(false); //生成后是否打开资源管理器
@@ -52,7 +52,7 @@ public class CodeGenerator {
 
         //生成包
         pc.setParent("com.sugar");
-        pc.setModuleName("message"); //模块名
+        pc.setModuleName("auth"); //模块名
 
         //生成包：com.asugar.edu.controller
         pc.setController("controller");
@@ -63,7 +63,7 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("message_mail","message_wechat");//根据数据库哪张表生成，有多张表就加逗号继续填写
+        strategy.setInclude("auth_user");//根据数据库哪张表生成，有多张表就加逗号继续填写
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
