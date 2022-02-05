@@ -1,0 +1,10 @@
+server:
+  port: 8292
+sugar:
+    name: 方糖
+    url: https://www.asugar.cn/
+    github: https://github.com/xingly-cn/
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

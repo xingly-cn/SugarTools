@@ -1,0 +1,28 @@
+server:
+  port: 8293
+
+spring:
+  redis:
+    host: 修改为自己的
+    port: 6379
+    password: 修改为自己的
+    timeout: 1800000
+    database: 0
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:修改为自己的
+    username: 修改为自己的
+    password: 修改为自己的
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mail:
+    host: 修改为自己的
+    username: 修改为自己的
+    password: 修改为自己的
+    default-encoding: UTF-8
+    port: 修改为自己的
+    protocol: 修改为自己的
