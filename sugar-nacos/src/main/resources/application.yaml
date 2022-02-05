@@ -1,9 +1,9 @@
 
+
 spring:
   application:
-    name: sugar-message
+    name: sugar-nacos
   cloud:
     nacos:
       discovery:
         server-addr: 175.27.243.243:8848
-

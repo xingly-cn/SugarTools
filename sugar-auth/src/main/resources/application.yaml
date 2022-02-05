@@ -1,26 +1,8 @@
-server:
-  port: 8291
 
 spring:
   application:
-    name: sugar-message
-  redis:
-    host: 175.27.243.243
-    port: 6379
-    password: 213879
-    timeout: 1800000
-    database: 0
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://8.142.199.134:3306/sugartool?serverTimezone=GMT%2B8
-    username: root
-    password: XNXxnx520
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-
-mybatis-plus:
-  mapper-locations: classpath:/xml/**.xml
+    name: sugar-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 175.27.243.243:8848

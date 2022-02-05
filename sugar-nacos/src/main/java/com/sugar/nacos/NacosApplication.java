@@ -1,16 +1,14 @@
-package com.sugar.auth;
-
+package com.sugar.nacos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ComponentScan(basePackages = {"com.sugar"})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableDiscoveryClient
-public class AuthApplication {
+public class NacosApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class,args);
+        SpringApplication.run(NacosApplication.class,args);
     }
 }
