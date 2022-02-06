@@ -5,9 +5,11 @@ import com.sugar.auth.entity.User;
 import com.sugar.auth.entity.vo.RegisterVo;
 import com.sugar.auth.service.UserService;
 import com.sugar.common.result.R;
+import com.sugar.common.result.UserVo;
 import com.sugar.common.utils.JwtUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,6 +58,16 @@ public class UserController {
         return R.ok().data("user",user);
     }
 
-
+    @GetMapping("/info2")
+    @ApiOperation("用户信息2")
+    public UserVo info2(String userId) {
+        User user = userService.getById(userId);
+        user.setPassword(null);
+        user.setGmtCreate(null);
+        user.setGmtModified(null);
+        UserVo userVo = new UserVo();
+        BeanUtils.copyProperties(user,userVo);
+        return userVo;
+    }
 }
 

@@ -3,15 +3,15 @@ package com.sugar.message.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sugar.common.result.PhoneVo;
 import com.sugar.common.result.R;
 import com.sugar.message.entity.Phone;
 import com.sugar.message.service.PhoneService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * <p>
@@ -50,6 +50,15 @@ public class PhoneController {
     }
 
 
+    //TODO 需要改成查询 sugar-good信息
+    @GetMapping("/getGoodInfo")
+    @ApiOperation("根据ID查询商品信息")
+    public PhoneVo getGoodInfo(String goodId) {
+        Phone phone = phoneService.getById(goodId);
+        PhoneVo phoneVo = new PhoneVo();
+        BeanUtils.copyProperties(phone,phoneVo);
+        return phoneVo;
+    }
 
 
 }
