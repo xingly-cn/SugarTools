@@ -20,6 +20,7 @@
         <module>sugar-auth</module>
         <module>sugar-message</module>
         <module>sugar-nacos</module>
+        <module>sugar-wepay</module>
     </modules>
 
     <properties>
