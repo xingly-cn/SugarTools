@@ -50,9 +50,9 @@ public class LogServiceImpl extends ServiceImpl<LogMapper, Log> implements LogSe
             req.put("spbill_create_ip", WePayUtils.getIp(request));
             req.put("notify_url", "https://tool.asugar.cn/wepay/notify");
             req.put("trade_type", "NATIVE");
-            req.put("sign", WXPayUtil.generateSignature(req, "5SD1F5W5S56987D2F1G5D6SD5654S66S", WXPayConstants.SignType.MD5));
+            req.put("sign", WXPayUtil.generateSignature(req, "5SD1F5W5S56987D2F1G5D6SD5654S66SXNX", WXPayConstants.SignType.MD5));
 
-            String xmlBody = WXPayUtil.generateSignedXml(req, "5SD1F5W5S56987D2F1G5D6SD5654S66S");
+            String xmlBody = WXPayUtil.generateSignedXml(req, "5SD1F5W5S56987D2F1G5D6SD5654S66SXNX");
             String result = WePayUtils.httpsRequest("https://api.mch.weixin.qq.com/pay/unifiedorder", "POST", xmlBody);
 
             Map<String, String> resultMap = WXPayUtil.xmlToMap(result);
@@ -81,7 +81,7 @@ public class LogServiceImpl extends ServiceImpl<LogMapper, Log> implements LogSe
             req.put("nonce_str", WXPayUtil.generateNonceStr());
 
             String xmlBody = null;
-            xmlBody = WXPayUtil.generateSignedXml(req, "5SD1F5W5S56987D2F1G5D6SD5654S66S");
+            xmlBody = WXPayUtil.generateSignedXml(req, "5SD1F5W5S56987D2F1G5D6SD5654S66SXNX");
             String result = WePayUtils.httpsRequest("https://api.mch.weixin.qq.com/pay/orderquery", "POST", xmlBody);
 
             Map<String, String> resultMap = WXPayUtil.xmlToMap(result);
