@@ -1,9 +1,15 @@
 package com.sugar.wepay.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.sugar.common.result.R;
+import com.sugar.wepay.service.LogService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * <p>
@@ -15,7 +21,20 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/wepay/log")
+@CrossOrigin
+@Api(tags = "支付管理")
 public class LogController {
+
+    @Autowired
+    private LogService logService;
+
+    @PostMapping("/createQR")
+    @ApiOperation("支付二维码")
+    public R createOCR(@RequestParam("orderNo") String orderNo, HttpServletRequest request) {
+        Map map = logService.createOCR(orderNo, request);
+        return R.ok().data(map);
+    }
+
 
 }
 
