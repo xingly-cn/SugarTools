@@ -6,21 +6,21 @@
 # 🛠️包含组件
 一个 Java 小巧工具箱，对各类 JDK 进行封装，组成各种小工具，一键使用，同时提供以下组件：
 
-| 模块              | 介绍                                    | 进度   |
-|-----------------|---------------------------------------|------|
-| Sugar-Common    | 全局公共模块（Swagger + Redis + MybatisPlus） | 100% |
-| Sugar-Auth      | SSO单点登录模块 （基于 Token 实现）               | 100% |
-| Sugar-Message   | 统一通知模块（短信 + 微信公众号 + 邮件 + 机器人）         | 95%  |
-| Sugar-QLogin    | QQ 登陆模块                               | 0%   |
-| Sugar-WePay     | 微信支付模块                                | 100% |
-| Sugar-Video     | 视频点播模块（支持分段加密 + 身份校验）                 | 0%   |
-| Sugar-Nacos     | 注册中心配置中心模块                            | 100% |
-| Sugar-Gateway   | 服务网关模块  （跨域 + 过滤器）                    | 100% |
-| Sugar-Admin     | 后台管理模块（数据增删 + 用户权限）                   | 0%   | 
-| Sugar-Authority | 权限管理模块                                | 5%   |
+| 模块            | 介绍                                    | 进度   |
+|---------------|---------------------------------------|------|
+| Sugar-Common  | 全局公共模块（Swagger + Redis + MybatisPlus） | 100% |
+| Sugar-Auth    | SSO单点登录模块 （基于 Token 实现）               | 100% |
+| Sugar-Message | 统一通知模块（短信 + 微信公众号 + 邮件 + 机器人）         | 95%  |
+| Sugar-QLogin  | QQ 登陆模块                               | 0%   |
+| Sugar-WePay   | 微信支付模块                                | 100% |
+| Sugar-Video   | 视频点播模块（支持分段加密 + 身份校验）                 | 0%   |
+| Sugar-Nacos   | 注册中心配置中心模块                            | 100% |
+| Sugar-Gateway | 服务网关模块  （跨域 + 过滤器）                    | 100% |
+| Sugar-Admin   | 后台管理模块（数据增删 + 用户权限）                   | 0%   | 
+| Sugar-Acl     | 权限管理模块                                | 5%   |
 
 # 🎁正在开发中
-- `Sugar-Authority` 95%
+- `Sugar-Acl` 95%
 
 
 # 🧬贡献代码的步骤
