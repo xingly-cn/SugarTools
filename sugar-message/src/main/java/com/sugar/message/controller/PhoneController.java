@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/message/phone")
-@CrossOrigin
 @Api(tags = "短信管理")
 public class PhoneController {
 

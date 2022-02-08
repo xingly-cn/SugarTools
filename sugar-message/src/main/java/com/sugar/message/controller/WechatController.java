@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/message/wechat")
-@CrossOrigin
 @Api(tags = "微信通知")
 public class WechatController {
 

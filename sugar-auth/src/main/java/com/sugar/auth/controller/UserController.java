@@ -25,7 +25,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/auth/user")
-@CrossOrigin
 @Api(tags = "用户管理")
 public class UserController {
 

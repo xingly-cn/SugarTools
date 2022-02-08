@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: sugar-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    nacos:
+      discovery:
+        server-addr: 175.27.243.243:8848
+        namespace: d3e12555-046f-4a5e-aa08-99790ae97e1b
+  main:
+    web-application-type: reactive

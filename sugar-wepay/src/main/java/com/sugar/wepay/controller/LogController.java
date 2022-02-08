@@ -21,7 +21,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wepay/log")
-@CrossOrigin
 @Api(tags = "支付管理")
 public class LogController {
 
