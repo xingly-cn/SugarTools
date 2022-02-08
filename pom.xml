@@ -21,6 +21,7 @@
         <module>sugar-message</module>
         <module>sugar-nacos</module>
         <module>sugar-wepay</module>
+        <module>sugar-gateway</module>
     </modules>
 
     <properties>
