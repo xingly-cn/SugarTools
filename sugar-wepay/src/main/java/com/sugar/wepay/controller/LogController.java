@@ -35,6 +35,17 @@ public class LogController {
         return R.ok().data(map);
     }
 
+    @GetMapping("/status")
+    @ApiOperation("支付状态")
+    public R status(String orderNo) {
+        String status = logService.queryStatus(orderNo);
+        if (status.equals("-1")) return R.error().message("支付中...");
+        if (status.length() == 28) {
+            logService.undateOrderStatus(orderNo, status);
+            return R.ok().data("status",status);
+        }
+        return R.error().message("支付失败");
+    }
 
 }
 

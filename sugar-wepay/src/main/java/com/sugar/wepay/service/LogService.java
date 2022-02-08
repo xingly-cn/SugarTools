@@ -17,4 +17,8 @@ import java.util.Map;
 public interface LogService extends IService<Log> {
 
     Map createOCR(String orderNo, HttpServletRequest request);
+
+    String queryStatus(String orderNo);
+
+    void undateOrderStatus(String orderNo, String status);
 }
