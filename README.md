@@ -11,7 +11,7 @@
 | Sugar-Common | 全局公共模块（Swagger + Redis + MybatisPlus） | 100% |
 | Sugar-Auth   | SSO单点登录模块 （基于 Token 实现）               | 100% |
 | Sugar-Message | 统一通知模块（短信 + 微信公众号 + 邮件 + 机器人）         | 95%  |
-| Sugar-QLogin | QQ登陆模块                                | 0%   |
+| Sugar-QLogin | QQ 登陆模块                               | 0%   |
 | Sugar-WePay  | 微信支付模块                                | 100% |
 | Sugar-Video  | 视频点播模块（支持分段加密 + 身份校验）                 | 0%   |
 | Sugar-Nacos  | 注册中心配置中心模块                            | 100% |
